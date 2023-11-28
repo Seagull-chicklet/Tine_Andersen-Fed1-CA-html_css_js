@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Tine andersen" />
+    <meta
+      name="description"
+      content="put your rainy days clothing and accessorize in the shopping cart and check out. secure your durable and affordable outdoors clothing to keep you warm and dry for those rainy days"
+    />
+    <title>Rainy days| Cart</title>
+    <link href="/css/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/9c8dfe4908.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;500;700&family=Unica+One&display=swap"
+    />
+  </head>
+  <body class="cart-checkout">
+    <label for="hamburger-menu"><i class="fas fa-bars"></i>menu</label>
+    <input type="checkbox" id="hamburger-menu" />
+    <nav class="menu">
+      <a href="/html/index.html" class="cta-button">Home</a>
+      <a href="/html/index.html#one" class="cta-button">Jackets</a>
+      <a href="/html/index.html#two" class="cta-button">about</a>
+      <a href="contact.html" class="cta-button">Contact</a>
+      <a href="cart.html" class="cta-button">Cart</a>
+    </nav>
+    <section class="cart-checkout-wrapping">
+      <h1>Cart & Checkout</h1>
+      <div class="product-card">
+        <div class="point">
+          <h3>cart</h3>
+        </div>
+        <div class="product-and-content">
+          <div class="product-image-cart">
+            <img
+              src="../images/lightweight-woman.png"
+              alt="grey lightweight jacket for running and exercise fitted for woman"
+            />
+          </div>
+          <div class="product-cart-text">
+            <p>current product description</p>
+            <p>of selected product</p>
+          </div>
+          <div class="product-adjust">
+            <div class="sizes">
+              <label>Size</label>
+              <select name="Size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
+            <br />
+            <div class="quantity-adjust">
+              <label>Quantity</label>
+              <!-- <button class="up-down" id="plus">-</button> -->
+              <select name="Quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+              <!-- <button class="up-down" id="minus">+</button> -->
+              <br />
+              <div class="product-trash">
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+              <br />
+              <div class="product-total-price">
+                <p>total:</p>
+              </div>
+              <div class="product-total-price-sum">
+                <h2>------ NOK</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="point">
+          <h3>checkout</h3>
+        </div>
+        <div class="point">
+          <form action="form-success.php" method="post">
+            <p>Name</p>
+            <input
+              class="fill-in"
+              type="text"
+              name=" name"
+              placeholder="Full name"
+            />
+            <div class="point">
+              <p>Address</p>
+              <input
+                class="fill-in"
+                type="text"
+                name="Address-field"
+                placeholder="Full Address"
+              />
+            </div>
+            <div class="point">
+              <p>E-mail</p>
+              <input
+                class="fill-in"
+                type="email"
+                name="e-mail-and-address"
+                placeholder="e-mail address"
+              />
+            </div>
+            <div class="point">
+              <p>Card number</p>
+              <input
+                class="fill-in"
+                type="text"
+                name="XXXX XXXX XXXX XXXX"
+                placeholder="XXXX XXXX XXXX XXXX"
+              />
+            </div>
+            <div class="point">
+              <p>Expire date</p>
+              <input
+                class="fill-in"
+                type="text"
+                name="XX XX"
+                placeholder="XX XX"
+              />
+            </div>
+            <div class="point">
+              <p>CVC</p>
+              <input class="fill-in" type="text" name="XXX" placeholder="XXX" />
+            </div>
+          </form>
+          <br />
+          <div class="point">
+            <i class="fa-brands fa-cc-visa"></i>
+            <input
+              class="dotts"
+              type="radio"
+              id="visa"
+              name="payment_method"
+              value="visa"
+            />
+            <img
+              class="vipps"
+              src="thumbnail-img/vipps_logo_rgb.png"
+              alt="logo for payment option"
+            />
+            <input
+              class="dotts"
+              type="radio"
+              id="vipps"
+              name="payment_method"
+              value="vipps_logo_"
+            />
+          </div>
+          <div class="point">
+            <a class="button-add" href="thankyou.html">Check out</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

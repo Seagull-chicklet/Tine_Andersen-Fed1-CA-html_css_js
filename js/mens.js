@@ -41,8 +41,8 @@ function renderJacket(jacket) {
   jacketDiv.classList.add("product-image");
   jacketDiv.classList.add("product-card");
   jacketButton.classList.add("button-add");
-  addToCartButton.addEventListener("click", () => {
-    window.location.href = `cart.html?id=${oneData.id}`;
+  jacketButton.addEventListener("click", () => {
+    window.location.href = `chosen_product.html?id=${jacket.id}`;
   });
   section.appendChild(jacketDiv);
 }

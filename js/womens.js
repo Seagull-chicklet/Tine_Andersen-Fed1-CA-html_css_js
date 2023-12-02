@@ -34,7 +34,7 @@ function renderJacket(jacket) {
   jacketDescribe.innerText = jacket.description;
 
   const jacketButton = document.createElement("button");
-  jacketButton.innerText = jacket.price;
+  jacketButton.innerText = "Take a look at me";
 
   jacketDiv.appendChild(jacketImage);
   jacketDiv.appendChild(jacketTitle);

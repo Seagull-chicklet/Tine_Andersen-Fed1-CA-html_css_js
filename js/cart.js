@@ -35,7 +35,7 @@ async function renderOneProduct() {
   const productImage = document.createElement("img");
   productImage.src = oneData.image;
   productImage.alt = oneData.tags;
-  productImage.classList.add("product-image");
+  productImage.classList.add("product-image-cart");
   productDisplay.appendChild(productImage);
 
   const productTitle = document.createElement("h2");

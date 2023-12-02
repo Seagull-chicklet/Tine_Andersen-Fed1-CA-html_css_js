@@ -19,6 +19,7 @@ function renderJacket(jacket) {
     console.error("Section not found");
     return;
   }
+
   const jacketImage = document.createElement("img");
   jacketImage.src = jacket.image;
   jacketImage.alt = jacket.tags;
@@ -31,7 +32,7 @@ function renderJacket(jacket) {
   const jacketDescribe = document.createElement("p");
   jacketDescribe.innerText = jacket.description;
   const jacketButton = document.createElement("button");
-  jacketButton.innerText = jacket.price;
+  jacketButton.innerText = "Take a look at me";
 
   jacketDiv.appendChild(jacketImage);
   jacketDiv.appendChild(jacketTitle);

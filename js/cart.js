@@ -28,7 +28,7 @@ async function renderOneProduct() {
   const oneData = await fetchOneProduct(id);
   console.log({ oneData });
 
-  const productDisplay = document.getElementById("cards");
+  const productDisplay = document.getElementById("cards-mini");
 
   productDisplay.innerHTML = "";
 

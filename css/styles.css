@@ -140,7 +140,7 @@ h2 {
 
 p {
   font-family: "UnicaOne", "Ubuntu", "Sans-serif";
-  font-size: 25px;
+  font-size: 20px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -294,6 +294,7 @@ hr {
   margin-right: 8px;
   margin-bottom: 10px;
   justify-content: space-between;
+  overflow-x: scroll;
 }
 
 .product-image {
@@ -303,7 +304,6 @@ hr {
 }
 
 #cards {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 8px;
@@ -342,16 +342,15 @@ hr {
     transform: rotate(360deg);
   }
 }
-.button-group {
-  display: inline-block;
-}
+
 .size-buttons {
-  text-align: center;
-  padding: 8px 8px 8px 8px;
+  display: inline-block;
+  padding: 8px 12px;
   border-radius: 8px;
   border-style: none;
   background-color: lightgray;
   cursor: pointer;
+  margin: 2px;
 }
 .size-buttons:hover {
   background-color: #053541;
@@ -364,7 +363,7 @@ hr {
 
 .product-content p {
   text-align: left;
-  font-size: 15px;
+  font-size: 20px;
   margin-top: 0px;
 }
 
@@ -436,7 +435,6 @@ hr {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin-right: 0px;
 }
 
 .product-image-cart img {
@@ -447,6 +445,7 @@ hr {
 .product-cart-text p {
   flex-wrap: wrap;
   font-size: 15px;
+  margin-left: 10px;
 }
 .product-adjust {
   display: flex;
@@ -610,13 +609,19 @@ body.thank-you {
   .about-image,
   .about-tex,
   .jackets-image {
-    flex-shrink: 1;
+    flex-shrink: 4;
   }
   .jackets-list a {
     display: block;
     font-size: 20px;
     justify-content: left;
   }
+}
+.product-card {
+  height: 650px;
+}
+.size-buttons {
+  font-size: 10px;
 }
 
 @media (max-width: 400px) {
@@ -644,11 +649,11 @@ body.thank-you {
   .about-image,
   .about-tex,
   .jackets-image {
-    flex-shrink: 1;
+    flex-shrink: 2;
   }
-  hr {
+  /* hr {
     width: 390px;
-  }
+  } */
 
   nav {
     display: none;

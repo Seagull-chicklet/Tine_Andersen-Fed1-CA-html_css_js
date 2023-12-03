@@ -54,7 +54,7 @@ async function renderOneProduct() {
   const sizeButtons = ["S", "M", "L", "XL", "XXL"];
 
   sizeButtons.forEach((size) => {
-    const sizeButton = document.createElement("size-buttons");
+    const sizeButton = document.createElement("button");
     sizeButton.textContent = size;
     sizeButton.classList.add("size-buttons");
     productDisplay.appendChild(sizeButton);

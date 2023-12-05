@@ -47,6 +47,9 @@ async function renderOneProduct() {
   const productPrice = document.createElement("p");
   productPrice.textContent = `Price: ${oneData.price}`;
 
+  const jacketButton = document.createElement("button");
+  jacketButton.innerText = "Add to cart";
+
   productDisplay.appendChild(productTitle);
   productDisplay.appendChild(productDescription);
   productDisplay.appendChild(productPrice);

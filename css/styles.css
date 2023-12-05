@@ -295,6 +295,7 @@ hr {
   margin-bottom: 10px;
   justify-content: space-between;
   overflow-x: scroll;
+  width: 100%;
 }
 
 .product-image {
@@ -320,11 +321,11 @@ hr {
   position: relative;
   width: 300px;
   align-self: auto;
-  border-radius: 8px;
   border-left: 8px;
   align-items: center;
   height: 800px;
   cursor: pointer;
+  margin-top: 20px;
 }
 .loader {
   border: 15px solid #d3e3e3;
@@ -383,6 +384,7 @@ hr {
   border-style: none;
   border-radius: 8px;
   padding: 10px;
+
   margin: 0px 10px 10px 10px;
   text-decoration: none;
   cursor: pointer;
@@ -392,18 +394,19 @@ hr {
   color: #d3e3e3;
 }
 
-.about-image,
-.light,
-.reflect,
-.sheep,
-.bad,
-.umbrella-person {
-  flex-direction: column;
+.about-image img,
+.light img,
+.reflect img,
+.sheep img,
+.bad img,
+.umbrella-person img {
   border-radius: 1rem;
   width: 100%;
   height: auto;
-  margin-left: 0px;
-  object-fit: cover;
+  margin: 0px;
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
 }
 
 /* .product-image {
@@ -442,11 +445,15 @@ hr {
   margin-top: 0px;
   padding: 10px;
 }
+.product-cart-text h2 {
+  margin-left: 20px;
+}
 .product-cart-text p {
   flex-wrap: wrap;
   font-size: 15px;
   margin-left: 10px;
 }
+
 .product-adjust {
   display: flex;
   flex-wrap: wrap;

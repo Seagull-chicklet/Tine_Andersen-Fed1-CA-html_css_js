@@ -50,6 +50,7 @@ async function renderOneProduct() {
   productDisplay.appendChild(productTitle);
   productDisplay.appendChild(productDescription);
   productDisplay.appendChild(productPrice);
+  jacketDiv.appendChild(jacketButton);
 
   const sizeButtons = ["S", "M", "L", "XL", "XXL"];
 

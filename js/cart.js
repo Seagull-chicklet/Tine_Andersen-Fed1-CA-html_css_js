@@ -1,3 +1,5 @@
+
+
 const currentUrl = document.location;
 console.log({ currentUrl });
 
@@ -28,15 +30,14 @@ async function renderOneProduct() {
   const loader = document.getElementById("loader");
   const loaderMessage = document.getElementById("loader-message");
 
-  try {
-    const oneData = await renderCartItem(id);
+    const oneData = await fetchOneProduct(id);
     console.log({ oneData });
 
     showLoader();
-    renderCartItem(oneData);
+    renderCartItem(oneData, productDisplay);
     productDisplay.innerHTML = "";
 
-    function renderCartItem(productData, selectedSize, selectedQuantity) {
+    function renderCartItem(oneData, null, null); {
       const cartItemContainer = document.getElementById("card-mini");
 
       const cartItem = document.createElement("div");
@@ -106,26 +107,9 @@ async function renderOneProduct() {
       }
 
       cartItemContainer.appendChild(cartItem);
-    }
-    if (loader) {
-      loader.style.display = "block";
-    }
-    if (loaderMessage) {
-      loaderMessage.style.display = "block";
-    }
-
-    const jackets = await getJackets();
-    console.log("All jackets:", jackets);
-
-    const mensJackets = jackets.filter((jacket) =>
-      jacket.tags.includes("mens")
-    );
-    console.log("Filtered mens jackets:", mensJackets);
-
-    mensJackets.forEach((jacket) => renderJacket(jacket));
-  } catch (error) {
-    console.error("Error getting great stuff:", error);
-  } finally {
+    } catch (error){
+        console.error("Error getting great stuff:", error);
+    }finally{
     if (loader) {
       loader.style.display = "none";
     }
@@ -134,6 +118,13 @@ async function renderOneProduct() {
     }
   }
 }
+
+function renderCartItem(productData, productDisplay){
+    const cartItemContainer = document.getElementById("card-mini")
+
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+    cartItem.dataset.productId = productData.id;
 
 const productImage = document.createElement("img");
 productImage.src = oneData.image;
@@ -223,5 +214,7 @@ function getCartDataFromStorage() {
   const cartData = localStorage.getItem("cart");
   return JSON.parse(cartData) || [];
 }
+}
+}
 
-renderOneProduct();
+renderOneProduct()

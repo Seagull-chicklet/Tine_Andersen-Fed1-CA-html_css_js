@@ -169,14 +169,6 @@ async function renderOneProduct() {
   addToCartButton.textContent = "Add to cart";
   addToCartButton.classList.add("button-add");
   addToCartButton.addEventListener("click", () => {
-    // const sizeButtonsArray = Array.from(sizeButtons);
-    // const activeButton = sizeButtonsArray.find(
-    //   (buttonElement) =>
-    //     buttonElement &&
-    //     sizeButtons &&
-    //     buttonElement.classList.contains("active")
-    // const selectedSize = selectedSize;
-
     if (selectedSize) {
       const selectedProduct = {
         id: oneData.id,
@@ -205,7 +197,7 @@ async function renderOneProduct() {
 
     console.log(product);
 
-    renderCartItem(product, selectedSize, product.quantity, product.price);
+    // renderCartItem(product, selectedSize, product.quantity, product.price);
   }
 }
 

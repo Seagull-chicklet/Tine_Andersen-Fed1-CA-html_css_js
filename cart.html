@@ -11,6 +11,8 @@
     />
     <title>Rainy days| Cart</title>
     <link href="/css/styles.css" rel="stylesheet" />
+    <script defer src="/js/cart.js"></script>
+    <script defer src="/js/chosen_product.js"></script>
     <script
       src="https://kit.fontawesome.com/9c8dfe4908.js"
       crossorigin="anonymous"
@@ -31,13 +33,17 @@
       <a href="/index.html#two" class="cta-button">about</a>
       <a href="contact.html" class="cta-button">Contact</a>
       <a href="cart.html" class="cta-button">Cart</a>
+      <span>0</span>
     </nav>
     <section class="cart-checkout-wrapping">
+   
       <h1>Cart & Checkout</h1>
-      
-      <div  id= "cards-mini" class="product-card-mini">
-        <div class="point">
-          
+      <ul id="buyJackets">
+        <li class=" buyJacket">
+      <div  id= "card-mini" class="product-card-mini">
+        <div id="loader" class="loader"></div>
+        <div id="loader-message" class="loader-message">
+          loading great stuff...
         </div>
         <div class="product-and-content">
           <div class="product-image-cart">
@@ -54,8 +60,8 @@
           </div>
           <div class="product-adjust">
             <div class="sizes">
-              <label>Size</label>
-              <select name="Size">
+              <label for="sizeDropDown">Size</label>
+              <select id="sizeDropDown"name="Size">
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
@@ -65,9 +71,8 @@
             </div>
             <br />
             <div class="quantity-adjust">
-              <label>Quantity</label>
-             
-              <select name="Quantity">
+              <label for="quantityDropDown">Quantity</label>
+              <select id="quantityDropDown"name="Quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -96,9 +101,16 @@
           </div>
         </div>
       </div>
+    </li>
+    </ul>
+   
       <div class="check_out-card">
         <div class="point">
           <h3>checkout</h3>
+        </div>
+        <div class="cartTotal">
+          <p>Your total:</p>
+          <p>------ NOK</p>
         </div>
         <div class="point">
           <form action="form-success.php" method="post">
@@ -178,6 +190,7 @@
           </div>
         </div>
       </div>
+    </ul>
     </section>
     <script src="/js/script.js"></script>
   </body>
